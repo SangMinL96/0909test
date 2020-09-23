@@ -5,15 +5,15 @@ function Calc({ setHistories }) {
   const [afterData, setAfterData] = useState("0");
   const [state, setState] = useState(true);
   const [cal, setCal] = useState(null);
-  const [result, setResult] = useState(null);
 
   const onNumberClick = (value) => {
     if (state === true) {
-      setBeforeData((props) => {
-        if (props !== "0") {
-          return props + value;
+      setBeforeData(() => {
+        if (beforeData !== "0") {
+          return beforeData + value;
+        } else {
+          return value;
         }
-        return value;
       });
     } else {
       setAfterData((props) => {
@@ -50,7 +50,7 @@ function Calc({ setHistories }) {
       default:
         break;
     }
-    setResult(results);
+
     setHistories([beforeData, cal, afterData, "=", results]);
   };
   const onAc = () => {
@@ -58,7 +58,6 @@ function Calc({ setHistories }) {
     setAfterData("0");
     setState(true);
     setCal(null);
-    setResult(null);
   };
 
   return (
