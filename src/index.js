@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
+  //머지 테스트
   <React.StrictMode>
     <App />
   </React.StrictMode>,
