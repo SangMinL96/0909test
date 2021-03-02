@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-  //머지 테스트ㄴㅇㅁㄹ
+  //머지 테스트ㄴㅇㅁㄹㄴㅇㄻㄴㅇ
   <React.StrictMode>
     <App />
   </React.StrictMode>,
